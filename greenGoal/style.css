@@ -1,0 +1,788 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+html{
+  overflow-x: hidden;
+}
+body{
+  overflow-x: hidden;
+}
+
+.sve{
+  height: auto;
+  overflow: hidden;
+}
+
+.sve header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25vh;
+}
+.sve header .logo img{
+  width: 4rem;
+  height: auto;
+  padding: 10px 0 0 0;
+}
+header ul.links li{
+  list-style: none;
+  display: inline-block;
+}
+header ul{
+  margin-right: 100px;
+}
+.sve header .logo{
+  margin-left: 15%;
+}
+header ul.links li a{
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  font-size: 20px;
+  padding: 10px 20px;
+  font-family: 'Francois One', sans-serif;
+}
+.icon{
+  display: none;
+}
+.icon>div{
+  width: 25px;
+  height: 3px;
+  background-color: #222222;
+  margin: 3px;
+  border-radius: 1.5px;
+  
+}
+
+@media screen and (max-width:690px){
+
+  body{
+    overflow-x: hidden !important;
+  }
+  html{
+    overflow-x: hidden !important;
+  }
+   .links{
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    background-color:#fcb319;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 3px -2px 10px #e2e2e2;
+    border-radius: 10px 0 0 10px;
+    z-index: 15;
+    animation-name: navLinkFade;
+   }
+   ul.links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 3;
+    padding-top: 15%;
+   }
+   .links li{
+    color: white;
+    width: 100%;
+   }
+   
+   
+   .icon{
+    display: block;
+    cursor: pointer;
+    z-index: 4;
+    margin-right: 10%;
+  
+   }
+  header ul{
+    margin: 0;
+  }
+
+  .naslovnica>div{
+    flex: 100%;
+  }
+   
+  .ploca-unutar{
+    flex-direction:column-reverse;
+  }
+  .ploca-unutar .slika{
+    width: 100%;
+    justify-content: center;
+  }
+  .ploca-unutar{
+    width: 90vw;
+    border: 1px solid rgb(218, 218, 218);
+    padding: 5vh 0vw
+  }
+  footer{
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  footer .ikone p{
+    width: 100vw;
+  }
+  footer>div.forma p{
+    width: 100%;
+  }
+  footer>div{
+    margin-bottom: 15%;
+  }
+  .slide{
+    flex-direction: column;
+  }
+  .slide .kartica-slika{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .slide img{
+    object-fit: contain;
+    height: auto;
+  }
+  .opis>div{
+    margin-bottom: 7%;
+  }
+  .okolis-unutar .dolje>div:nth-child(2){
+    flex: 100%;
+  }
+  .okolis-unutar .dolje>div:nth-child(1){
+    width: 50%;
+    margin: auto;
+    height: auto;
+   }
+  .okolis-unutar .dolje{
+    flex-direction: column;
+  }
+  .quote-block .quote-desno .quote-tekst{
+    margin-top: 20%;
+  }
+  .pravila-unutar {
+    flex-direction: column;
+  }
+  .pravila-unutar .lijevo{
+    flex-direction: row !important;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 10%;
+  }
+}
+
+.nav-active{
+  transform: translateX(0%);
+}
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+/*----------naslovnica----------*/
+
+.naslovnica{
+  display: flex;
+  position: relative;
+}
+.naslovnica>div{
+  padding: 5%;
+}
+.naslovnica .slika{
+  flex: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 30%;
+}
+.naslovnica .slika img{
+  width: 30vw;
+  height: auto;
+  transform: rotate(-10deg);
+}
+.naslovnica .naslovi{
+  flex: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.naslovi .naslovi-box{
+  font-family: 'Francois One', sans-serif;
+  line-height: 70px;
+  padding-left: 10vw;
+  width: 100%;
+}
+
+h1{
+  font-size: 7vw;
+  color: #08728b;
+  line-height: 1.2;
+}
+h3{
+  font-size: 2.3vw;
+  font-weight: 200;
+  max-width: 100%;
+  line-height: 1.2;
+}
+
+.saznaj-vise a{
+  border: none;
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-family: 'Francois One', sans-serif;
+  color: rgb(26, 26, 26);
+  background-color: #fcb319;
+  font-size: 19px;
+  text-decoration: none;
+}
+
+/*krivulja*/
+.custom-shape-divider-top-1680389086 {
+  position: absolute;
+  bottom: -100;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.custom-shape-divider-top-1680389086 svg {
+  position: relative;
+  display: block;
+  width: calc(149% + 1.3px);
+  height: 167px;
+}
+
+.custom-shape-divider-top-1680389086 .shape-fill {
+  fill: #ffffff;
+}
+/*-------quote section--------*/
+
+.drugi-div{
+  height: 100vh;
+  background-color: #08728b;
+  position: relative;
+  border: none;
+}
+
+/*---------krivulja2------------*/
+
+.custom-shape-divider-bottom-1680391027 {
+  position: absolute;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  
+}
+
+.custom-shape-divider-bottom-1680391027 svg {
+  position: relative;
+  display: block;
+  width: calc(151% + 1.3px);
+  height: 106px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1680391027 .shape-fill {
+  fill: #ffffff;
+}
+
+.quote-block{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.quote-block>div{
+  height: 100%;
+}
+.quote-slika img{
+  width: 90%;
+  height: auto;
+}
+.quote-slika{
+  display: flex;
+  align-items: center;
+  flex:25%;
+}
+
+.quote-desno{
+  flex: 65%;
+}
+.quote-desno .slika-desno{
+  display: flex;
+}
+.quote-desno .slika-desno img{
+  width: 80%;
+  height: auto;
+  
+
+}
+.quote-desno h2{
+  font-family: 'Francois One', sans-serif;
+  color: white;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.quote-tekst{
+  width: 90%;
+  margin-top: 5px;
+  
+}
+.quote-tekst p{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+}
+
+/*--------treci div-------*/
+
+.treci-div{
+  width: 100%;
+  height: 15%;
+  position: relative;
+  margin-top: 50px;
+  margin: auto;
+}
+.treci-div h1{
+  font-family: 'Francois One', sans-serif;
+  color: #fcb319;
+  font-size: 6vw;
+  width: 100%;
+  text-align: center;
+}
+
+
+.treci-div>h1:nth-child(1){
+  color: #08728b;
+}
+.treci-div>h1:nth-child(2){
+  color: #fcb319;
+}
+.treci-div>h1:nth-child(3){
+  color: #f15a2b;
+}
+
+/*-------------cetvrti div-----------*/
+.cetvrti-div{
+  height: 15%;
+  width: 100vw;
+  
+}
+
+.cetvrti-unutar>div{
+  width: 100%;
+}
+.cetvrti-unutar .cetvrti-tekst{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.cetvrti-tekst p{
+  font-size: 2.2vw;
+  color: rgb(44, 44, 44);
+  font-family: 'Francois One', sans-serif;
+  text-align: center;
+  padding: 2% 10%;
+}
+.strelica img{
+  width: 4.2vw;
+  height: auto;
+  transform: rotateZ(90deg);
+}
+.cetvrti-unutar .slike{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cetvrti-unutar .slike>div{
+  margin: 10px;
+}
+.cetvrti-unutar .slike .sl1{
+  width: 20vw;
+  transform-origin: center;
+}
+.cetvrti-unutar .slike .sl3{
+  width: 20vw;
+  transform-origin: center;
+}
+.cetvrti-unutar .slike .sl2{
+  width: 30vw;
+  transform-origin: center;
+}
+.cetvrti-unutar .slike>div img{
+  width: 100%;
+}
+
+.link{
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link img{
+  width: 4vw;
+  height: 10%;
+  padding-right: 20px;
+  object-fit: contain;
+}
+.link p{
+  font-family: 'Francois One', sans-serif;
+  font-size: 1rem;
+}
+.link p a{
+  text-decoration: none;
+  color: #fcb319;
+}
+
+/*------footer--------*/
+
+footer{
+  width: 100%;
+  height: 30%;
+  background-color: #08728b;
+  display: flex;
+  justify-content: space-around;
+  align-items:flex-start;
+  color: white;
+  font-family: 'Francois One', sans-serif;
+  padding: 10%;
+}
+footer h2{
+  font-size: 2rem
+}
+footer p{
+  font-size: 1.2rem;
+  width: 40vw;
+  margin-bottom: 7px;
+}
+.forma form{
+  display: flex;
+  flex-direction: column;
+}
+.forma form input{
+  border: none;
+  padding: 3%;
+  margin-bottom: 7px ;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+.forma form button{
+  border: none;
+  display: inline-block;
+  padding: 1.2%;
+  border-radius: 10px;
+  background-color: #fcb319;
+  color: rgb(34, 34, 34);
+  font-family: 'Francois One', sans-serif;
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+.kontakt .naslov{
+  margin-bottom: 8%;
+}
+.kontakt .ikone .drustvene-mreze i{
+  color: white;
+  font-size: 2rem;
+  padding: 0 1.1%;
+}
+.kontakt .ikone p{
+  margin-bottom: 5px;
+}
+
+/*--------PRAVILA IGRE-------*/
+
+/*-------naslovnica-pravila*/
+.naslovnica-pravila{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.naslovnica-pravila .pravila-unutar{
+  width: 90vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10%;
+}
+
+.naslovnica-pravila .pravila-unutar .lijevo{
+  flex: 35%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.naslovnica-pravila .pravila-unutar .desno{
+  flex: 65%;
+}
+.pravila-unutar .desno h2{
+  font-family: 'Francois One', sans-serif;
+  font-size: 4vw;
+  color: rgb(39, 39, 39);
+  padding-bottom: 7%;
+}
+.pravila-unutar .desno p{
+  font-family: 'Inter', sans-serif; 
+  font-size: 1rem;
+  margin: 4px 0;
+  font-weight: lighter;
+  line-height: 1.6;
+}
+.naslovnica-pravila .pravila-unutar .lijevo img{
+  width: 20vw;
+  height: auto;
+}
+
+/*ploca*/
+.ploca{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+.ploca-unutar{
+  display: flex;
+  align-items: flex-start;
+}
+
+.ploca-unutar .slika{
+  flex: 50%;
+  display: flex;
+}
+.ploca-unutar .slika img{
+  width: 40vw;
+  transform: rotateZ(8deg);
+  transform-origin: center;
+}
+.ploca-unutar .tekst{
+  flex: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 4vh 5vw;
+}
+.ploca-unutar .tekst h3{
+  font-family: 'Francois One', sans-serif;
+  font-size: 5vw;
+}
+.ploca-unutar .tekst p{
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/*-----------kartice-----*/
+*::before, *::after{
+  box-sizing: border-box;
+}
+.kartice{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kartice-unutar{
+  width: 80vw;
+  height: 130vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-top: 12%;
+  padding-bottom: 12%;
+}
+.slide[data-active]{
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+.slide>img{
+  width: 30%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.dugme{
+  position: absolute;
+  background: none;
+  border: none;
+  top: 50%;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  padding: 0 0.5rem;
+  background-color: #fcb319;
+  z-index: 3;
+  
+}
+.dugme i{
+  font-size: 5vw;
+  
+}
+.dugme:hover, 
+.dugme:active{
+  color: white;
+  background-color: #f15a2b;
+}
+.dugme.prev{
+  left: 1rem;
+}
+.dugme.next{
+  right: 1rem;
+}
+
+/*---*/
+
+.kartice-unutar .slide .kartica-slika{
+  flex: 35%;
+}
+.kartice-unutar .slide .kartica-slika img{
+  width: 25vw;
+}
+.kartice-unutar .slide .kartica-tekst{
+  flex: 65%;
+  font-family: 'Francois One', sans-serif;
+  padding: 2%;
+  height: 100%;
+  padding-top: 10%;
+}
+.kartice-unutar .slide .kartica-tekst>div:nth-child(2){
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+}
+.kartice-unutar .slide .kartica-tekst>div:nth-child(3) h3{
+  font-size: 1.5rem;
+}
+
+/*-------O NAMA-------*/
+
+.okolis{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.okolis-unutar{
+  width: 80%;
+  margin-top: 10%;
+}
+.okolis-unutar>div{
+  display: flex;
+}
+
+.okolis-unutar .gore>div:nth-child(1){
+  flex: 85%;
+  font-family: 'Francois One', sans-serif;
+}
+.okolis-unutar .gore>div:nth-child(2){
+  flex: 15%;
+}
+.okolis-unutar h1{
+  font-size: 7vw;
+}
+.okolis-unutar .gore>div:nth-child(2) img{
+  width: 100%;
+  height: auto;
+}
+
+/*dolje*/
+
+.okolis-unutar .dolje>div:nth-child(1){
+  flex: 25%;
+}
+.okolis-unutar .dolje>div:nth-child(1) img{
+  width: 100%;
+  height: auto;
+}
+.okolis-unutar .dolje>div:nth-child(2){
+  flex: 75%;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+.dolje h2{
+  padding-bottom: 20px;
+  line-height: 1.2;
+}
+.dolje p{
+  font-size: 1rem;
+}
+
+/*-----zemlja-----*/
+
+.zemlja{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.zemlja .tekst{
+  display: flex;
+  justify-content: center;
+}
+.zemlja .tekst p{
+  font-size: 3.2vw;
+  text-align: center;
+  width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #222222;
+  padding-bottom: 20px;
+  margin: 5%;
+}
+
+.zemlja .slika{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+.zemlja .slika img{
+  width: 15vw;
+  height: auto;
+}
