@@ -59,14 +59,8 @@ header ul.links li a{
 
 @media screen and (max-width:690px){
 
-  body{
-    overflow-x: hidden !important;
-  }
-  html{
-    overflow-x: hidden !important;
-  }
    .links{
-    position: absolute;
+    position: fixed;
     right: 0;
     height: 92vh;
     top: 8vh;
