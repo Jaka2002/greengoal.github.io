@@ -36,13 +36,13 @@ window.addEventListener('scroll', function() {
     desnoIde3.style.marginLeft = value * 0.12 +'px';
     
 
-    value = value -100;
+    value = value -50;
     //console.log(value);
 
 
-    slika1.style.transform = 'scale(' + (1 + value * 0.001) + ')'; //jedinica je scale = 1
-    slika2.style.transform = 'scale(' + (1 + value * -0.0005) + ')'; //jedinica je scale = 1
-    slika3.style.transform = 'scale(' + (1 + value * 0.001) + ')'; //jedinica je scale = 1
+    slika1.style.transform = 'scale(' + (1 + value * 0.0008) + ')'; //jedinica je scale = 1
+    slika2.style.transform = 'scale(' + (1 + value * -0.0009) + ')'; //jedinica je scale = 1
+    slika3.style.transform = 'scale(' + (1 + value * 0.0008) + ')'; //jedinica je scale = 1
     
 
    
